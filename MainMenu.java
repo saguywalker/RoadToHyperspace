@@ -8,14 +8,18 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MainMenu extends World
 {
-
-    /**
-     * Constructor for objects of class MyWorld.
-     * 
-     */
+    public static GreenfootSound soundtrack=new GreenfootSound("bgsound.wav");
+    GreenfootImage hyperspace=new GreenfootImage("thename.png");
     public MainMenu()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(490, 840, 1); 
+        getBackground().drawImage(hyperspace, 61,140);
+        addObject(new PlayButt(),getWidth()/4,2*getHeight()/5);
+        addObject(new HelpButt(),getWidth()/2,2*getHeight()/5);
+        addObject(new ExitButt(),3*getWidth()/4,2*getHeight()/5);
+    }
+    
+    public void started(){
+        soundtrack.play();
     }
 }
