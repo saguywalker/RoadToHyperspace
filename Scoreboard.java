@@ -16,5 +16,8 @@ public class Scoreboard extends World
     public Scoreboard()
     {    
         super(490, 840, 1); 
+        showText("SCOREBOARD",getWidth()/2,getHeight()/4);
+        addObject(new BackButt(),getWidth()/2,getHeight()*3/4);
+        showText(""+Hyperspace.score,getWidth()/2,getHeight()/2);
     }
 }

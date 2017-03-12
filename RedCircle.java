@@ -12,6 +12,9 @@ public class RedCircle extends Circle
      * Act - do whatever the RedCircle wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    public RedCircle(int lv){
+        
+    }
     public void act() 
     {
         // Add your action code here.

@@ -12,6 +12,9 @@ public class BlueCircle extends Circle
      * Act - do whatever the BlueCircle wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    public BlueCircle(int lv){
+    
+    }
     public void act() 
     {
         // Add your action code here.
