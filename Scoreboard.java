@@ -17,11 +17,11 @@ public class Scoreboard extends World
     GreenfootImage scorePic=new GreenfootImage(""+Hyperspace.score,72,Color.DARK_GRAY,Color.LIGHT_GRAY);
     public Scoreboard()
     {    
-        super(490, 840, 1); 
-        getBackground().drawImage(board, 110, 300);
+        super(420, 840, 1);
+        getBackground().drawImage(board, 70, 300);
         addObject(new BackButt(),3*getWidth()/4,getHeight()*3/4+100);
         addObject(new AgainButt(),getWidth()/3,getHeight()*3/4+100);
-        getBackground().drawImage(scorePic,getWidth()/2-30,getHeight()/2+75);
+        getBackground().drawImage(scorePic,getWidth()/2-20,getHeight()/2+75);
         Hyperspace.score=0;
     }
 }

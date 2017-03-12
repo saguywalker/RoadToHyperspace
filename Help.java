@@ -9,11 +9,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Help extends World
 {
 
-    GreenfootImage txt=new GreenfootImage("texthelp.png");
+    GreenfootImage txt=new GreenfootImage("txt.png");
     public Help()
     {    
-        super(700, 500, 1); 
-        getBackground().drawImage(txt, 50,10);
+        super(420, 840, 1); 
+        getBackground().drawImage(txt, 5,10);
         addObject(new BackButt(),3*getWidth()/4,3*getHeight()/4);
     }
 }

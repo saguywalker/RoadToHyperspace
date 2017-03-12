@@ -12,8 +12,8 @@ public class MainMenu extends World
     GreenfootImage hyperspace=new GreenfootImage("thename.png");
     public MainMenu()
     {    
-        super(490, 840, 1); 
-        getBackground().drawImage(hyperspace, 61,140);
+        super(420, 840, 1);
+        getBackground().drawImage(hyperspace, 35,140);
         addObject(new PlayButt(),getWidth()/4,2*getHeight()/5);
         addObject(new HelpButt(),getWidth()/2,2*getHeight()/5);
         addObject(new ExitButt(),3*getWidth()/4,2*getHeight()/5);
