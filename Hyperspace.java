@@ -14,4 +14,10 @@ public class Hyperspace extends World
         super(490, 840, 1); 
         
     }
+    
+    public void playing(int lv){
+        
+    }
+    
+    
 }

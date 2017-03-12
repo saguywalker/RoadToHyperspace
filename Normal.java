@@ -13,7 +13,13 @@ public class Normal extends Hyperspace
      * Constructor for objects of class Normal.
      * 
      */
-    public Normal()
+    int lv;
+    public Normal(int lv)
     {
+        this.lv=lv;
+    }
+    
+    public void act(){
+        super.playing(lv);
     }
 }

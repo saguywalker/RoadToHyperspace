@@ -13,7 +13,13 @@ public class Hell extends Hyperspace
      * Constructor for objects of class Hell.
      * 
      */
-    public Hell()
+    int lv;
+    public Hell(int lv)
     {
+        this.lv=lv;
+    }
+    
+    public void act(){
+        super.playing(lv);
     }
 }

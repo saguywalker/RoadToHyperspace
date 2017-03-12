@@ -13,7 +13,13 @@ public class Easy extends Hyperspace
      * Constructor for objects of class Easy.
      * 
      */
-    public Easy()
+    int lv;
+    public Easy(int lv)
     {
+        this.lv=lv;
+    }
+    
+    public void act(){
+        super.playing(lv);
     }
 }
