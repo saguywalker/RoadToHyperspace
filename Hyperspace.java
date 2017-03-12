@@ -188,9 +188,8 @@ public class Hyperspace extends World
         }
     }
     
-    
     public void updateScore(){
-        if(time<=65) time++;
+        if(time<=62) time++;
         else{
             time=0;
             score++;

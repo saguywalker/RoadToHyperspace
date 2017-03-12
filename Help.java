@@ -13,7 +13,7 @@ public class Help extends World
     public Help()
     {    
         super(420, 840, 1); 
-        getBackground().drawImage(txt, 5,10);
-        addObject(new BackButt(),3*getWidth()/4,3*getHeight()/4);
+        getBackground().drawImage(txt, 5,50);
+        addObject(new BackButt(),getWidth()/2,3*getHeight()/4);
     }
 }
