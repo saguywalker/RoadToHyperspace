@@ -8,10 +8,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Car extends Actor
 {
-    /**
-     * Act - do whatever the Car wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    public Car(){
+        //dafault
+    }
+    public Car(String name){
+        setImage(name);
+    }
     public void act() 
     {
         // Add your action code here.

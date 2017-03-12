@@ -5,4 +5,6 @@ comment1.params=
 comment1.target=Hyperspace()
 comment2.params=lv
 comment2.target=void\ playing(int)
-numComments=3
+comment3.params=
+comment3.target=void\ draw()
+numComments=4
