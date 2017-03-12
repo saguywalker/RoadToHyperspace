@@ -16,7 +16,7 @@ public class Hyperspace extends World
     int rdHr=Greenfoot.getRandomNumber(50)+300;
     int rdHb=Greenfoot.getRandomNumber(50)+300;
     GreenfootImage bg=new GreenfootImage(490,840);
-    
+    int rgb[]=new int[3];
     public Hyperspace()
     {    
         super(420, 840, 1); 
@@ -49,7 +49,6 @@ public class Hyperspace extends World
     }
     
     public void changeBG(int lv){
-       int rgb[]=new int[3];
        if(lv==0) {
            rgb[0]=b;rgb[1]=r;rgb[2]=g;
        }else if(lv==1){
@@ -60,21 +59,21 @@ public class Hyperspace extends World
        if(score%3==0 && score!=0){
             if(rgb[0]>=200) rgb[0]=0;
             rgb[0]++;
-            bg.setColor(new Color(r,g,b));
+            bg.setColor(new Color(rgb[0],rgb[1],rgb[2]));
             bg.fill();
             draw();
        }
        if(score%5==0 && score!=0){
             if(rgb[1]>=200) rgb[1]=0;
             rgb[1]++;
-            bg.setColor(new Color(r,g,b));
+            bg.setColor(new Color(rgb[0],rgb[1],rgb[2]));
             bg.fill();
             draw();
        }
        if(score%7==0 && score!=0){
             if(rgb[2]>=200) rgb[2]=0;
             rgb[2]++;
-            bg.setColor(new Color(r,g,b));
+            bg.setColor(new Color(rgb[0],rgb[1],rgb[2]));
             bg.fill();
             draw();
        }
@@ -111,21 +110,21 @@ public class Hyperspace extends World
             else{
                 cb=0;
                 rdCb=Greenfoot.getRandomNumber(100)+100;
-                addObject(new BlueCircle(lv),(Greenfoot.getRandomNumber(3)+3)*70+35,0);
+                addObject(new BlueCircle(lv),(Greenfoot.getRandomNumber(3))*70+35,0);
             }
         }else if(lv==1){
             if(cb<rdCb)cb++;
             else{
                 cb=0;
                 rdCb=Greenfoot.getRandomNumber(60)+60;
-                addObject(new BlueCircle(lv),(Greenfoot.getRandomNumber(3)+3)*70+35,0);
+                addObject(new BlueCircle(lv),(Greenfoot.getRandomNumber(3))*70+35,0);
             }
         }else{
             if(cb<rdCb)cb++;
             else{
                 cb=0;
-                rdCb=Greenfoot.getRandomNumber(40)+40;
-                addObject(new BlueCircle(lv),(Greenfoot.getRandomNumber(3)+3)*70+35,0);
+                rdCb=Greenfoot.getRandomNumber(50)+40;
+                addObject(new BlueCircle(lv),(Greenfoot.getRandomNumber(3))*70+35,0);
             }
         }
     }
@@ -136,21 +135,21 @@ public class Hyperspace extends World
             else{
                 hb=0;
                 rdHb=Greenfoot.getRandomNumber(100)+100;
-                addObject(new BlueHex(lv),(Greenfoot.getRandomNumber(3)+3)*70+35,0);
+                addObject(new BlueHex(lv),(Greenfoot.getRandomNumber(3))*70+35,0);
             }
         }else if(lv==1){
             if(hb<rdHb)hb++;
             else{
                 hb=0;
                 rdHb=Greenfoot.getRandomNumber(60)+60;
-                addObject(new BlueHex(lv),(Greenfoot.getRandomNumber(3)+3)*70+35,0);
+                addObject(new BlueHex(lv),(Greenfoot.getRandomNumber(3))*70+35,0);
             }
         }else{
             if(hb<rdHb)hb++;
             else{
                 hb=0;
-                rdHb=Greenfoot.getRandomNumber(40)+40;
-                addObject(new BlueHex(lv),(Greenfoot.getRandomNumber(3)+3)*70+35,0);
+                rdHb=Greenfoot.getRandomNumber(50)+40;
+                addObject(new BlueHex(lv),(Greenfoot.getRandomNumber(3))*70+35,0);
             }
         }
     }
@@ -173,8 +172,9 @@ public class Hyperspace extends World
         }
     }
     
+    
     public void updateScore(){
-        if(time<=70) time++;
+        if(time<=65) time++;
         else{
             time=0;
             score++;

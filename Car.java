@@ -36,7 +36,6 @@ public class Car extends Actor
     public void isDriving(){
         if(driving==true && c<=10) {
             c++;
-            setRotation(0);
         }
         else{
             driving=false;
@@ -59,6 +58,7 @@ public class Car extends Actor
                 setLocation(getX()-1,getY());
             }
         }
+        setRotation(0);
     }
     
     public void checkCircle(){

@@ -16,4 +16,8 @@ public class Circle extends Actor
     {
         // Add your action code here.
     }    
+    
+    public void circleCheck(){
+        if(this.getY()==getWorld().getHeight()-1) ((Hyperspace)getWorld()).gameOver();
+    }
 }
