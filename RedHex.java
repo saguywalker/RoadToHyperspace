@@ -12,7 +12,7 @@ public class RedHex extends Hexagon
      * Act - do whatever the RedHex wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    int speed=5;
+    int speed=6;
     public RedHex(int lv){
         setRotation(90);
         if(lv!=0) speed+=3;

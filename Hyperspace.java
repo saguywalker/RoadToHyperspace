@@ -15,7 +15,7 @@ public class Hyperspace extends World
     int rdCb=Greenfoot.getRandomNumber(50)+150;
     int rdHr=Greenfoot.getRandomNumber(50)+300;
     int rdHb=Greenfoot.getRandomNumber(50)+300;
-    GreenfootImage bg=new GreenfootImage(490,840);
+    GreenfootImage bg=new GreenfootImage(420,840);
     int rgb[]=new int[3];
     public Hyperspace()
     {    
@@ -46,37 +46,53 @@ public class Hyperspace extends World
         getBackground().drawLine(419,0,419,840);
         getBackground().setColor(Color.YELLOW);
         getBackground().drawLine(210,0,210,840);
+        getBackground().setColor(Color.BLACK);
     }
     
     public void changeBG(int lv){
        if(lv==0) {
-           rgb[0]=b;rgb[1]=r;rgb[2]=g;
+           if(score%5==0 && score!=0){
+               if(r>=200) r=0;
+               r++;
+            }
+           if(score%7==0 && score!=0){
+                if(g>=230) g=0;
+                g++;
+           } 
+           if(score%9==0 && score!=0){
+               if(b>=200) b=0;
+               b++;
+           }
        }else if(lv==1){
-           rgb[0]=g;rgb[1]=b;rgb[2]=r;
+           if(score%5==0 && score!=0){
+               if(g>=230) g=0;
+               g++;
+            }
+           if(score%7==0 && score!=0){
+                if(b>=200) b=0;
+                b++;
+           } 
+           if(score%9==0 && score!=0){
+               if(r>=200) r=0;
+               r++;
+           }
        }else{
-           rgb[0]=r;rgb[1]=g;rgb[2]=b;
+           if(score%5==0 && score!=0){
+               if(b>=200) b=0;
+               r++;
+            }
+           if(score%7==0 && score!=0){
+                if(r>=200) r=0;
+                r++;
+           } 
+           if(score%9==0 && score!=0){
+               if(g>=230) g=0;
+               g++;
+           }
        }
-       if(score%3==0 && score!=0){
-            if(rgb[0]>=200) rgb[0]=0;
-            rgb[0]++;
-            bg.setColor(new Color(rgb[0],rgb[1],rgb[2]));
-            bg.fill();
-            draw();
-       }
-       if(score%5==0 && score!=0){
-            if(rgb[1]>=200) rgb[1]=0;
-            rgb[1]++;
-            bg.setColor(new Color(rgb[0],rgb[1],rgb[2]));
-            bg.fill();
-            draw();
-       }
-       if(score%7==0 && score!=0){
-            if(rgb[2]>=200) rgb[2]=0;
-            rgb[2]++;
-            bg.setColor(new Color(rgb[0],rgb[1],rgb[2]));
-            bg.fill();
-            draw();
-       }
+       bg.setColor(new Color(r,g,b));
+       bg.fill();
+       draw();
     }
     
     public void create(int lv){
