@@ -16,6 +16,7 @@ public class HellButt extends Actor
     {
         if(Greenfoot.mouseClicked(this)) {
             Greenfoot.setWorld(new Hell(2));
+            Greenfoot.playSound("pop.wav");
         }
     }    
 }

@@ -16,6 +16,7 @@ public class NormalButt extends Actor
     {
         if(Greenfoot.mouseClicked(this)) {
             Greenfoot.setWorld(new Normal(1));
+            Greenfoot.playSound("pop.wav");
         }
     }    
 }

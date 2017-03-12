@@ -18,6 +18,9 @@ public class Circle extends Actor
     }    
     
     public void circleCheck(){
-        if(this.getY()==getWorld().getHeight()-1) ((Hyperspace)getWorld()).gameOver();
+        if(this.getY()==getWorld().getHeight()-1) {
+            Greenfoot.playSound("fade.wav");
+            ((Hyperspace)getWorld()).gameOver();
+        }
     }
 }

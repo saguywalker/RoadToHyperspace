@@ -16,6 +16,7 @@ public class EasyButt extends Actor
     {
         if(Greenfoot.mouseClicked(this)) {
             Greenfoot.setWorld(new Easy(0));
+            Greenfoot.playSound("pop.wav");
         }
     }    
 }

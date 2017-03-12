@@ -63,12 +63,14 @@ public class Car extends Actor
     
     public void checkCircle(){
         if(this.isTouching(Circle.class)){
+            Greenfoot.playSound("sound82.wav");
             this.removeTouching(Circle.class);
         }
     }
     
     public void checkHexagon(){
         if(this.isTouching(Hexagon.class)){
+            Greenfoot.playSound("fade.wav");
             ((Hyperspace)getWorld()).gameOver();
         }
     }

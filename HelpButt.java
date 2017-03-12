@@ -16,6 +16,7 @@ public class HelpButt extends Actor
     {
         if(Greenfoot.mouseClicked(this)) {
             Greenfoot.setWorld(new Help());
+            Greenfoot.playSound("pop.wav");
         }
     }    
 }

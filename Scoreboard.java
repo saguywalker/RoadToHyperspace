@@ -21,8 +21,7 @@ public class Scoreboard extends World
         getBackground().drawImage(board, 110, 300);
         addObject(new BackButt(),3*getWidth()/4,getHeight()*3/4+100);
         addObject(new AgainButt(),getWidth()/3,getHeight()*3/4+100);
-        getBackground().drawImage(scorePic,getWidth()/2,getHeight()/2+75);
-        //showText(""+Hyperspace.score,getWidth()/2,getHeight()/2+100);
+        getBackground().drawImage(scorePic,getWidth()/2-30,getHeight()/2+75);
         Hyperspace.score=0;
     }
 }
