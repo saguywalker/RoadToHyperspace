@@ -107,7 +107,7 @@ public class Hyperspace extends World
             if(cr<rdCr) cr++;
             else{
                 cr=0;
-                rdCr=Greenfoot.getRandomNumber(100)+100;
+                rdCr=Greenfoot.getRandomNumber(100)+80;
                 addObject(new RedCircle(lv),(Greenfoot.getRandomNumber(3)+3)*70+35,0);
             }
         }else{ //normal and hell red geometric are moving same speed
@@ -125,7 +125,7 @@ public class Hyperspace extends World
             if(cb<rdCb)cb++;
             else{
                 cb=0;
-                rdCb=Greenfoot.getRandomNumber(100)+100;
+                rdCb=Greenfoot.getRandomNumber(100)+80;
                 addObject(new BlueCircle(lv),(Greenfoot.getRandomNumber(3))*70+35,0);
             }
         }else if(lv==1){
@@ -150,7 +150,7 @@ public class Hyperspace extends World
             if(hb<rdHb)hb++;
             else{
                 hb=0;
-                rdHb=Greenfoot.getRandomNumber(100)+100;
+                rdHb=Greenfoot.getRandomNumber(100)+80;
                 addObject(new BlueHex(lv),(Greenfoot.getRandomNumber(3))*70+35,0);
             }
         }else if(lv==1){
@@ -175,7 +175,7 @@ public class Hyperspace extends World
             if(hr<rdHr) hr++;
             else{
                 hr=0;
-                rdHr=Greenfoot.getRandomNumber(100)+100;
+                rdHr=Greenfoot.getRandomNumber(100)+80;
                 addObject(new RedHex(lv),(Greenfoot.getRandomNumber(3)+3)*70+35,0);
             }
         }else{ //normal and hell red geometric are moving same speed 
