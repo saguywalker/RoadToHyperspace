@@ -20,6 +20,6 @@ public class MainMenu extends World
     }
     
     public void started(){
-        soundtrack.play();
+        soundtrack.playLoop();
     }
 }
