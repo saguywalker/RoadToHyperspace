@@ -8,7 +8,7 @@ import java.awt.Color;
  */
 public class Hyperspace extends World
 {
-    public static int score=0;
+    public static long score=0;
     int cr=0,cb=0,hr=0,hb=0,time=0;
     int r,g,b=0;
     int rdCr=Greenfoot.getRandomNumber(50)+150;
@@ -17,6 +17,7 @@ public class Hyperspace extends World
     int rdHb=Greenfoot.getRandomNumber(50)+300;
     GreenfootImage bg=new GreenfootImage(420,840);
     int rgb[]=new int[3];
+    SimpleTimer timer=new SimpleTimer();
     public Hyperspace()
     {    
         super(420, 840, 1); 
@@ -189,11 +190,7 @@ public class Hyperspace extends World
     }
     
     public void updateScore(){
-        if(time<=62) time++;
-        else{
-            time=0;
-            score++;
-        }
+        score=timer.millisElapsed()/1000;
     }
     
     public void gameOver(){
