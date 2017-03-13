@@ -19,6 +19,6 @@ public class Hexagon extends Actor
     }
     
     public void hexagonCheck(){
-        if(this.getY()==getWorld().getHeight()-1 || this.isTouching(Circle.class)) getWorld().removeObject(this);
+        if(this.getY()==getWorld().getHeight()-1) getWorld().removeObject(this);
     }
 }
