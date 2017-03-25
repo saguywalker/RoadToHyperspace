@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import java.awt.Color;
+
 /**
  * Write a description of class Hyperspace here.
  * 
@@ -9,8 +9,9 @@ import java.awt.Color;
 public class Hyperspace extends World
 {
     public static long score=0;
+    boolean rIncrease, gIncrease, bIncrease;
     int cr=0,cb=0,hr=0,hb=0,time=0;
-    int r,g,b=0;
+    int r,g,b;
     int rdCr=Greenfoot.getRandomNumber(50)+150;
     int rdCb=Greenfoot.getRandomNumber(50)+150;
     int rdHr=Greenfoot.getRandomNumber(50)+300;
@@ -27,6 +28,9 @@ public class Hyperspace extends World
         addObject(new Car("Blue.png"),35+getWidth()/6,10*getHeight()/12);
         addObject(new Car("Red.png"),35+4*getWidth()/6,10*getHeight()/12);
         draw();
+        r = Greenfoot.getRandomNumber(79)+126;
+        g = Greenfoot.getRandomNumber(149)+101;
+        b = Greenfoot.getRandomNumber(99)+101;
     }
     
     public void playing(int lv){
@@ -51,44 +55,88 @@ public class Hyperspace extends World
     }
     
     public void changeBG(int lv){
-       if(lv==0) {
-           if(score%5==0 && score!=0){
-               if(r>=200) r=0;
+       if(score == 0){
+           rIncrease = true;
+           gIncrease = true;
+           bIncrease = true;
+       }
+        if(lv==0) {
+           if(score%5==0 && score!=0 && rIncrease){
+               if(r>=200) rIncrease = false;
                r++;
             }
-           if(score%7==0 && score!=0){
-                if(g>=230) g=0;
-                g++;
+           if(score%7==0 && score!=0 && gIncrease){
+               if(g>=200) gIncrease = false;
+               g++;
            } 
-           if(score%9==0 && score!=0){
-               if(b>=200) b=0;
+           if(score%9==0 && score!=0 && bIncrease){
+               if(b>=200) bIncrease = false;
                b++;
            }
+           
+           if(score%5==0 && score!=0 && !rIncrease){
+               if(r<=125) rIncrease = true;
+               r--;
+            }
+           if(score%7==0 && score!=0 && !gIncrease){
+               if(g<=100) gIncrease = true;
+               g--;
+           } 
+           if(score%9==0 && score!=0 && !bIncrease){
+               if(b<=100) bIncrease = true;
+               b--;
+           }
        }else if(lv==1){
-           if(score%5==0 && score!=0){
-               if(g>=230) g=0;
+           if(score%5==0 && score!=0 && gIncrease){
+               if(g>=200) gIncrease = false;
                g++;
             }
-           if(score%7==0 && score!=0){
-                if(b>=200) b=0;
-                b++;
+           if(score%7==0 && score!=0 && bIncrease){
+               if(b>=200) bIncrease = false;
+               b++;
            } 
-           if(score%9==0 && score!=0){
-               if(r>=200) r=0;
+           if(score%9==0 && score!=0 && rIncrease){
+               if(r>=200) rIncrease = false;
                r++;
            }
-       }else{
-           if(score%5==0 && score!=0){
-               if(b>=200) b=0;
-               r++;
+           
+           if(score%5==0 && score!=0 && !gIncrease){
+               if(g<=100) gIncrease = true;
+               g--;
             }
-           if(score%7==0 && score!=0){
-                if(r>=200) r=0;
-                r++;
+           if(score%7==0 && score!=0 && !bIncrease){
+               if(b<=100) bIncrease = true;
+               b--;
            } 
-           if(score%9==0 && score!=0){
-               if(g>=230) g=0;
+           if(score%9==0 && score!=0 && !rIncrease){
+               if(r<=125) rIncrease = true;
+               r--;
+           }
+       }else{
+           if(score%5==0 && score!=0 && bIncrease){
+               if(b>=200) bIncrease = false;
+               b++;
+            }
+           if(score%7==0 && score!=0 && rIncrease){
+               if(r>=200) rIncrease = false;
+               r++;
+           } 
+           if(score%9==0 && score!=0 && gIncrease){
+               if(g>=200) gIncrease = false;
                g++;
+           }
+           
+           if(score%5==0 && score!=0 && !bIncrease){
+               if(b<=100) bIncrease = true;
+               b--;
+            }
+           if(score%7==0 && score!=0 && !rIncrease){
+               if(r<=125) rIncrease = true;
+               r--;
+           } 
+           if(score%9==0 && score!=0 && !gIncrease){
+               if(g<=100) gIncrease = true;
+               g--;
            }
        }
        bg.setColor(new Color(r,g,b));
