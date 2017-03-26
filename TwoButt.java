@@ -16,7 +16,7 @@ public class TwoButt extends Actor
     {
         // Add your action code here.
         if(Greenfoot.mouseClicked(this)) {
-            Greenfoot.setWorld(new MainMenu());
+            Greenfoot.setWorld(new PVPHyperspace());
             Greenfoot.playSound("pop.wav");
         }
     }    
