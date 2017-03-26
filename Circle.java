@@ -22,6 +22,6 @@ public class Circle extends Actor
             Greenfoot.playSound("fade.wav");
             ((Hyperspace)getWorld()).gameOver();
         }
-        if(this.isTouching(Hexagon.class)) this.removeTouching(Hexagon.class);
+        if(this.isTouching(Square.class)) this.removeTouching(Square.class);
     }
 }

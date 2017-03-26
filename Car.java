@@ -30,7 +30,7 @@ public class Car extends Actor
     {
         isDriving();
         checkCircle();
-        checkHexagon();
+        checkSquare();
     }
     
     public void isDriving(){
@@ -68,8 +68,8 @@ public class Car extends Actor
         }
     }
     
-    public void checkHexagon(){
-        if(this.isTouching(Hexagon.class)){
+    public void checkSquare(){
+        if(this.isTouching(Square.class)){
             Greenfoot.playSound("fade.wav");
             ((Hyperspace)getWorld()).gameOver();
         }

@@ -1,8 +1,8 @@
 #BlueJ class context
-comment0.target=BlueHex
+comment0.target=BlueSQ
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ BlueHex\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=lv
-comment1.target=BlueHex(int)
+comment1.target=BlueSQ(int)
 comment2.params=
 comment2.target=void\ act()
 numComments=3

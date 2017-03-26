@@ -1,4 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.awt.Color;
 
 /**
  * Write a description of class Hyperspace here.
@@ -200,21 +201,21 @@ public class Hyperspace extends World
             else{
                 hb=0;
                 rdHb=Greenfoot.getRandomNumber(100)+80;
-                addObject(new BlueHex(lv),(Greenfoot.getRandomNumber(3))*70+35,0);
+                addObject(new BlueSQ(lv),(Greenfoot.getRandomNumber(3))*70+35,0);
             }
         }else if(lv==1){
             if(hb<rdHb)hb++;
             else{
                 hb=0;
                 rdHb=Greenfoot.getRandomNumber(60)+60;
-                addObject(new BlueHex(lv),(Greenfoot.getRandomNumber(3))*70+35,0);
+                addObject(new BlueSQ(lv),(Greenfoot.getRandomNumber(3))*70+35,0);
             }
         }else{
             if(hb<rdHb)hb++;
             else{
                 hb=0;
                 rdHb=Greenfoot.getRandomNumber(50)+40;
-                addObject(new BlueHex(lv),(Greenfoot.getRandomNumber(3))*70+35,0);
+                addObject(new BlueSQ(lv),(Greenfoot.getRandomNumber(3))*70+35,0);
             }
         }
     }
@@ -225,14 +226,14 @@ public class Hyperspace extends World
             else{
                 hr=0;
                 rdHr=Greenfoot.getRandomNumber(100)+80;
-                addObject(new RedHex(lv),(Greenfoot.getRandomNumber(3)+3)*70+35,0);
+                addObject(new RedSQ(lv),(Greenfoot.getRandomNumber(3)+3)*70+35,0);
             }
         }else{ //normal and hell red geometric are moving same speed 
             if(hr<rdHr) hr++;
             else{
                 hr=0;
                 rdHr=Greenfoot.getRandomNumber(60)+60;
-                addObject(new RedHex(lv),(Greenfoot.getRandomNumber(3)+3)*70+35,0);
+                addObject(new RedSQ(lv),(Greenfoot.getRandomNumber(3)+3)*70+35,0);
             }
         }
     }

@@ -6,20 +6,20 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class BlueHex extends Hexagon
+public class BlueSQ extends Square
 {
     /**
      * Act - do whatever the BlueHex wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     int speed=3;
-    public BlueHex(int lv){
+    public BlueSQ(int lv){
         setRotation(90);
         speed=(lv+1)*3+speed;
     }
     public void act() 
     {
-        super.hexagonCheck();
+        super.squareCheck();
         move(speed);
     }    
 }

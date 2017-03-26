@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Hexagon extends Actor
+public class Square extends Actor
 {
     /**
      * Act - do whatever the Hexagon wants to do. This method is called whenever
@@ -18,7 +18,7 @@ public class Hexagon extends Actor
         // Add your action code here.
     }
     
-    public void hexagonCheck(){
+    public void squareCheck(){
         if(this.getY()==getWorld().getHeight()-1) getWorld().removeObject(this);
     }
 }
