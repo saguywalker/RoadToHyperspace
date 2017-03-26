@@ -1,21 +1,22 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class PlayButt here.
+ * Write a description of class TwoButt here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class PlayButt extends Actor
+public class TwoButt extends Actor
 {
     /**
-     * Act - do whatever the PlayButt wants to do. This method is called whenever
+     * Act - do whatever the TwoButt wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
+        // Add your action code here.
         if(Greenfoot.mouseClicked(this)) {
-            Greenfoot.setWorld(new SelectMode());
+            Greenfoot.setWorld(new MainMenu());
             Greenfoot.playSound("pop.wav");
         }
     }    
