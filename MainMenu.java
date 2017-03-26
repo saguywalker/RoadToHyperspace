@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MainMenu extends World
 {
+    public static String curPage;
     public static GreenfootSound soundtrack=new GreenfootSound("bgsound.wav");
     GreenfootImage hyperspace=new GreenfootImage("thename.png");
     public MainMenu()

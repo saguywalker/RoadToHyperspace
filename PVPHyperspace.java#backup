@@ -16,8 +16,7 @@ public class PVPHyperspace extends World
     public PVPHyperspace()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(420, 840, 1);
-        MainMenu.curPage = "PVP";
+        super(420, 840, 1); 
         showText("COMING SOON....",getWidth()/2,getHeight()/2);
         addObject(new BackButt(),getWidth()/2,3*getHeight()/4);
     }

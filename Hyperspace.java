@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import java.awt.Color;
+
 
 /**
  * Write a description of class Hyperspace here.
@@ -14,7 +14,7 @@ public class Hyperspace extends World
     int cr=0,cb=0,hr=0,hb=0,time=0;
     int r,g,b;
     int rdCr=Greenfoot.getRandomNumber(50)+150;
-    int rdCb=Greenfoot.getRandomNumber(50)+150;
+    int rdCb=Greenfoot.getRandomNumber(50)+150; 
     int rdHr=Greenfoot.getRandomNumber(50)+300;
     int rdHb=Greenfoot.getRandomNumber(50)+300;
     GreenfootImage bg=new GreenfootImage(420,840);

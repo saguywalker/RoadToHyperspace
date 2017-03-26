@@ -9,7 +9,6 @@ public class SelectLevel extends World{
     GreenfootImage select=new GreenfootImage("button_select-level.png");
     public SelectLevel(){    
          super(420, 840, 1); 
-         MainMenu.curPage = "Slvl";
          getBackground().drawImage(select, 90,140);
          addObject(new EasyButt(),getWidth()/5,2*getHeight()/5);
          addObject(new NormalButt(),getWidth()/2,2*getHeight()/5); 
