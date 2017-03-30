@@ -1,22 +1,22 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class RedCircle here.
+ * Write a description of class RedCirclePVP here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class RedCircle extends Circle
+public class RedCirclePVP extends CirclePVP
 {
     /**
-     * Act - do whatever the RedCircle wants to do. This method is called whenever
+     * Act - do whatever the RedCirclePVP wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    int speed=6;
-    public RedCircle(int lv){
+    int speed = 9;
+    public RedCirclePVP(){
         setRotation(90);
-        if(lv!=0) speed+=3;
     }
+    
     public void act() 
     {
         super.circleCheck();
