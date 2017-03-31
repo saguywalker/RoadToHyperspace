@@ -30,8 +30,13 @@ public class PVPHyperspace extends World
         bg.setColor(new Color(r,g,b));
         bg.fill();
         setBackground(bg);
+        addObject(new CarPVP("BluePVP.png",1),26,10*getHeight()/12);
+        addObject(new CarPVP("BluePVP.png",2),237,10*getHeight()/12);
+        addObject(new CarPVP("RedPVP.png",1),130,10*getHeight()/12);
+        addObject(new CarPVP("RedPVP.png",2),341,10*getHeight()/12);
         
     }
+    
     
     public void act(){
         create();

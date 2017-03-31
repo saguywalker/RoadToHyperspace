@@ -7,7 +7,6 @@ comment2.params=
 comment2.target=void\ act()
 comment3.params=
 comment3.target=void\ checkCircle()
-comment3.text=public\ void\ moving(){\r\n\ \ \ \ \ \ \ \ if(Greenfoot.isKeyDown(r)\ &&\ getX()<\=x\ &&\ driving\=\=false){\r\n\ \ \ \ \ \ \ \ \ \ \ \ driving\=true;\r\n\ \ \ \ \ \ \ \ \ \ \ \ setRotation(20);\r\n\ \ \ \ \ \ \ \ \ \ \ \ for(int\ i\=0;i<70;i++){\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setLocation(getX()+1,getY());\r\n\ \ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ }else\ if(Greenfoot.isKeyDown(l)\ &&\ getX()>\=x\ &&\ driving\=\=false){\r\n\ \ \ \ \ \ \ \ \ \ \ \ driving\=true;\r\n\ \ \ \ \ \ \ \ \ \ \ \ setRotation(-20);\r\n\ \ \ \ \ \ \ \ \ \ \ \ for(int\ i\=0;i<70;i++){\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setLocation(getX()-1,getY());\r\n\ \ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ setRotation(0);\r\n}
 comment4.params=
 comment4.target=void\ checkSquare()
 numComments=5
