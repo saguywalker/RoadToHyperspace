@@ -6,9 +6,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class BackButt extends Actor
+public class BackButt extends Button
 {
-  
+    
     /**
      * Act - do whatever the BackButt wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.

@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class EasyButt extends Actor
+public class EasyButt extends Button
 {
     /**
      * Act - do whatever the EasyButt wants to do. This method is called whenever

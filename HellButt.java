@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class HellButt extends Actor
+public class HellButt extends Button
 {
     /**
      * Act - do whatever the HellButt wants to do. This method is called whenever
