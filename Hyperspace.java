@@ -26,8 +26,8 @@ public class Hyperspace extends World
         bg.setColor(new Color(r,g,b));
         bg.fill();
         setBackground(bg);
-        addObject(new Car("Blue.png"),35+getWidth()/6,10*getHeight()/12);
-        addObject(new Car("Red.png"),35+4*getWidth()/6,10*getHeight()/12);
+        addObject(new Car1Player("Blue.png"),35+getWidth()/6,10*getHeight()/12);
+        addObject(new Car1Player("Red.png"),35+4*getWidth()/6,10*getHeight()/12);
         draw();
         r = Greenfoot.getRandomNumber(79)+126;
         g = Greenfoot.getRandomNumber(149)+101;

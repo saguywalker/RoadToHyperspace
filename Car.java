@@ -8,32 +8,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Car extends Actor
 {
-    String l,r;
-    int c=0,x;
-    boolean driving=false;
     public Car(){
-        //dafault
-    }
-    public Car(String name){
-        setImage(name);
-        if(name.equals("Red.png")){
-            l="left";
-            r="right";
-            x=315;
-        }else{
-            l="A";
-            r="D";
-            x=105;
-        }
-    }
-    public void act() 
-    {
-        isDriving();
-        checkCircle();
-        checkSquare();
+    
     }
     
-    public void isDriving(){
+    public void act() 
+    {
+        
+    }
+    
+    /*public void isDriving(){
         if(driving==true && c<=10) {
             c++;
         }
@@ -42,9 +26,9 @@ public class Car extends Actor
             c=0;
             moving();
         }
-    }
+    }*/
     
-    public void moving(){
+    /*public void moving(){
         if(Greenfoot.isKeyDown(r) && getX()<=x && driving==false){
             driving=true;
             setRotation(20);
@@ -59,7 +43,7 @@ public class Car extends Actor
             }
         }
         setRotation(0);
-    }
+    }*/
     
     public void checkCircle(){
         if(this.isTouching(Circle.class)){
