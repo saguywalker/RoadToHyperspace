@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class BlueCirclePVP extends CirclePVP
+public class BlueCirclePVP extends Circle
 {
     /**
      * Act - do whatever the BlueCirclePVP wants to do. This method is called whenever
