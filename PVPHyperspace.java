@@ -142,7 +142,7 @@ public class PVPHyperspace extends World
             hr=0;
             rdCr=Greenfoot.getRandomNumber(60)+60;
             addObject(new RedSQPVP(),(Greenfoot.getRandomNumber(2)+2)*52+26,0);
-            addObject(new RedSQPVP(),(Greenfoot.getRandomNumber(2)*52)+341,0);
+            addObject(new RedTri(),(Greenfoot.getRandomNumber(2)*52)+341,0);
         }
     }
     
@@ -152,7 +152,7 @@ public class PVPHyperspace extends World
             hb=0;
             rdCr=Greenfoot.getRandomNumber(60)+60;
             addObject(new BlueSQPVP(),(Greenfoot.getRandomNumber(2)*52)+26,0);
-            addObject(new BlueSQPVP(),(Greenfoot.getRandomNumber(2)*52)+237,0);
+            addObject(new BlueTri(),(Greenfoot.getRandomNumber(2)*52)+237,0);
         }
     }
     

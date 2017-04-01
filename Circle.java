@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Circle extends Actor
+public class Circle extends Geometric
 {
     /**
      * Act - do whatever the Circle wants to do. This method is called whenever
