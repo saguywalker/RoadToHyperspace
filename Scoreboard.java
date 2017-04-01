@@ -18,6 +18,7 @@ public class Scoreboard extends World
     public Scoreboard()
     {    
         super(420, 840, 1);
+        MainMenu.curPage = "Score";
         getBackground().drawImage(board, 70, 300);
         addObject(new BackButt(),3*getWidth()/4,getHeight()*3/4+100);
         addObject(new AgainButt(),getWidth()/3,getHeight()*3/4+100);

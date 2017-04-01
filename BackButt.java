@@ -16,11 +16,7 @@ public class BackButt extends Button
     public void act() 
     {
         if(Greenfoot.mouseClicked(this)) {
-            if(MainMenu.curPage.equals("SM")){
-                Greenfoot.setWorld(new MainMenu());
-                Greenfoot.playSound("pop.wav");
-            }
-            if(MainMenu.curPage.equals("Help")){
+            if(MainMenu.curPage.equals("SM") || MainMenu.curPage.equals("Help") || MainMenu.curPage.equals("Score")){
                 Greenfoot.setWorld(new MainMenu());
                 Greenfoot.playSound("pop.wav");
             }
@@ -29,9 +25,10 @@ public class BackButt extends Button
                 Greenfoot.playSound("pop.wav");
             }
             if(MainMenu.curPage.equals("PVP")){
-                Greenfoot.setWorld(new SelectMode());
+                Greenfoot.setWorld(new PVPHyperspace());
                 Greenfoot.playSound("pop.wav");
             }
+
         }
     }    
 }

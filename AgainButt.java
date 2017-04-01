@@ -15,7 +15,7 @@ public class AgainButt extends Button
     public void act() 
     {
         if(Greenfoot.mouseClicked(this)) {
-            Greenfoot.setWorld(new SelectLevel());
+            Greenfoot.setWorld(new SelectMode());
             Greenfoot.playSound("pop.wav");
         }
     }    
