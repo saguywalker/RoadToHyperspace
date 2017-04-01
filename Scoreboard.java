@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import java.awt.*;
+//import java.awt.*;
 /**
  * Write a description of class Scoreboard here.
  * 
@@ -11,7 +11,7 @@ public class Scoreboard extends World
     GreenfootImage board=new GreenfootImage("button_scoreboard.png");
     GreenfootImage scorePic;
     public Scoreboard()
-    {    
+    {     
         super(420, 840, 1);
         MainMenu.curPage = "Score";
         scorePic=new GreenfootImage(Space.message,60,Color.DARK_GRAY,Color.LIGHT_GRAY);

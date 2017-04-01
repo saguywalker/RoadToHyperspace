@@ -15,7 +15,7 @@ public class Help extends World
     {    
         super(420, 840, 1);
         MainMenu.curPage = "Help";
-        getBackground().drawImage(txt, 5,50);
-        addObject(new BackButt(),getWidth()/2,3*getHeight()/4);
+        getBackground().drawImage(txt, 5,40);
+        addObject(new BackButt(),getWidth()/2,3*getHeight()/4+10);
     }
 }
