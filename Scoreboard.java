@@ -23,8 +23,14 @@ public class Scoreboard extends World
         getBackground().drawImage(board, 70, 300);
         addObject(new BackButt(),3*getWidth()/4,getHeight()*3/4+100);
         addObject(new AgainButt(),getWidth()/3,getHeight()*3/4+100);
+        try{
+            int var=Integer.parseInt(Space.message);
+            getBackground().drawImage(scorePic,getWidth()/2-20,getHeight()/2+75);
+        }catch(NumberFormatException e){
+            getBackground().drawImage(scorePic,28,getHeight()/2+75);
+        }
         //getBackground().drawImage(scorePic,getWidth()/2-20,getHeight()/2+75);
-        getBackground().drawImage(scorePic,5,getHeight()/2+75);
+        //getBackground().drawImage(scorePic,5,getHeight()/2+75);
         Space.score=0;
         Space.message="";
     }
