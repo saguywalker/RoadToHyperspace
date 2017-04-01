@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Triangle extends Geometric
 {
+    //remove this object when it's at down edge of world
     public void triCheck(){
         if(this.getY()==getWorld().getHeight()-1) getWorld().removeObject(this);
     }

@@ -16,6 +16,7 @@ public class TwoButt extends Button
     {
         // Add your action code here.
         if(Greenfoot.mouseClicked(this)) {
+            
             Greenfoot.setWorld(new PVPHyperspace());
             Greenfoot.playSound("pop.wav");
         }

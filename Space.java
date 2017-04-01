@@ -17,12 +17,10 @@ public class Space extends World
         super(420, 840, 1);  
     }
     
+    //update score with SimpleTimer class (1 second = 1 score)
     public void updateScore(){
         score=timer.millisElapsed()/1000;
         message=""+score;
     }
-    
-    public void gameOver(String ms){
-        Greenfoot.setWorld(new Scoreboard());
-    }
+   
 }

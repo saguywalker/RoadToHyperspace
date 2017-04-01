@@ -8,10 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class BlueCirclePVP extends Circle
 {
-    /**
-     * Act - do whatever the BlueCirclePVP wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+
     int speed = 9;
     public BlueCirclePVP(){
         setRotation(90);

@@ -9,13 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class SelectMode extends World
 {
     GreenfootImage select=new GreenfootImage("button_select-mode.png");
-    /** 
-     * Constructor for objects of class SelectMode.
-     *  
-     */
     public SelectMode()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(420, 840, 1);
         MainMenu.curPage = "SM";
         getBackground().drawImage(select, 90,140);

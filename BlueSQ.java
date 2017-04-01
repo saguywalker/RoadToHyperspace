@@ -8,10 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class BlueSQ extends Square
 {
-    /**
-     * Act - do whatever the BlueHex wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+
     int speed=3;
     public BlueSQ(int lv){
         setRotation(90);

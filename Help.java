@@ -10,6 +10,7 @@ public class Help extends World
 {
 
     GreenfootImage txt=new GreenfootImage("txt.png");
+    
     public Help()
     {    
         super(420, 840, 1);

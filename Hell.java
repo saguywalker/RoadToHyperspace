@@ -8,11 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Hell extends Hyperspace
 {
-
-    /**
-     * Constructor for objects of class Hell.
-     * 
-     */
     int lv;
     public Hell(int lv)
     {

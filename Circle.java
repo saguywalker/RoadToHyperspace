@@ -8,17 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Circle extends Geometric
 {
-    /**
-     * Act - do whatever the Circle wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
-    {
-        // Add your action code here.
-    }    
     
     public void circleCheck(){
-        if(this.getY()==getWorld().getHeight()-1) {
+        if(this.getY()==getWorld().getHeight()-1) { //when it's at down edge of world
             if(MainMenu.curPage.equals("1Player")){
                 Greenfoot.playSound("fade.wav");
                 Greenfoot.setWorld(new Scoreboard());
@@ -26,16 +18,17 @@ public class Circle extends Geometric
             if(MainMenu.curPage.equals("PVPMode")){
                    if(this.getX()<=getWorld().getWidth()/2){
                        Greenfoot.playSound("fade.wav");
-                       ((Space)getWorld()).message="Player 2 WIN!";
+                       ((Space)getWorld()).message=((PVPHyperspace)getWorld()).p2;
                        Greenfoot.setWorld(new Scoreboard());
                     }else{
                        Greenfoot.playSound("fade.wav");
-                       ((Space)getWorld()).message="Player 1 WIN!";
+                       ((Space)getWorld()).message=((PVPHyperspace)getWorld()).p1;
                        Greenfoot.setWorld(new Scoreboard());
                     }
                 }
         }
         
+        //remove another geometric that touching this object for fix the bug
         if(this.isTouching(Square.class)) this.removeTouching(Square.class);
         if(this.isTouching(Triangle.class)) this.removeTouching(Triangle.class);
     }

@@ -1,5 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.awt.*;
+import javax.swing.JOptionPane;
+
 /**
  * Write a description of class PVPHyperspace here.
  * 
@@ -8,7 +10,7 @@ import java.awt.*;
  */
 public class PVPHyperspace extends Space
 {
-    
+    String p1,p2;
     int playNum = 0;
     boolean rIncrease, gIncrease, bIncrease;
     int cr=0,cb=0,hr=0,hb=0,time=0;
@@ -19,15 +21,12 @@ public class PVPHyperspace extends Space
     int rdHb=Greenfoot.getRandomNumber(50)+300;
     GreenfootImage bg=new GreenfootImage(420,840);
     int rgb[]=new int[3];
-    /**
-     * Constructor for objects of class PVPHyperspace.
-     * 
-     */
-    
+
     public PVPHyperspace()
-    {    
-        
+    {            
         MainMenu.curPage = "PVPMode";
+        p1=JOptionPane.showInputDialog("Enter 1st player's name : ");
+        p2=JOptionPane.showInputDialog("Enter 2nd player's name : ");
         bg.setColor(new Color(r,g,b));
         bg.fill();
         setBackground(bg);
@@ -38,11 +37,10 @@ public class PVPHyperspace extends Space
         
     }
     
-    
     public void act(){
         create();
-        showText("Player 1",getWidth()/4,getHeight()/12);
-        showText("Player 2",3*getWidth()/4,getHeight()/12);
+        showText(p1,getWidth()/4,getHeight()/12);
+        showText(p2,3*getWidth()/4,getHeight()/12);
         changeBG();
     }
    
@@ -50,6 +48,7 @@ public class PVPHyperspace extends Space
         playNum = x;
     }
     
+    //draw line in the map
     public void draw(){
         getBackground().setColor(Color.BLUE);
         getBackground().drawLine(52,0,52,840);
@@ -73,6 +72,7 @@ public class PVPHyperspace extends Space
         getBackground().setColor(Color.BLACK);
     }
     
+    //chage RGB color of background when score increased
     public void changeBG(){
        if(score == 0){
            rIncrease = true;
@@ -110,6 +110,7 @@ public class PVPHyperspace extends Space
        draw();
     }
     
+    //create geometric in random 
     public void create(){
         createRedCir();
         createBlueCir();
@@ -121,7 +122,7 @@ public class PVPHyperspace extends Space
         if(cr<rdCr) cr++;
         else{
             cr=0;
-            rdCr=Greenfoot.getRandomNumber(60)+60;
+            rdCr=Greenfoot.getRandomNumber(60)+50;
             addObject(new RedCirclePVP(),(Greenfoot.getRandomNumber(2)+2)*52+26,0);
             addObject(new RedCirclePVP(),(Greenfoot.getRandomNumber(2)*52)+341,0);
         }
@@ -131,7 +132,7 @@ public class PVPHyperspace extends Space
         if(cb<rdCb) cb++;
         else{
             cb=0;
-            rdCr=Greenfoot.getRandomNumber(60)+60;
+            rdCr=Greenfoot.getRandomNumber(60)+50;
             addObject(new BlueCirclePVP(),(Greenfoot.getRandomNumber(2)*52)+26,0);
             addObject(new BlueCirclePVP(),(Greenfoot.getRandomNumber(2)*52)+237,0);
         }
@@ -141,7 +142,7 @@ public class PVPHyperspace extends Space
         if(hr<rdHr) hr++;
         else{
             hr=0;
-            rdCr=Greenfoot.getRandomNumber(60)+60;
+            rdCr=Greenfoot.getRandomNumber(60)+50;
             addObject(new RedSQPVP(),(Greenfoot.getRandomNumber(2)+2)*52+26,0);
             addObject(new RedTri(),(Greenfoot.getRandomNumber(2)*52)+341,0);
         }
@@ -151,7 +152,7 @@ public class PVPHyperspace extends Space
         if(hb<rdHb) hb++;
         else{
             hb=0;
-            rdCr=Greenfoot.getRandomNumber(60)+60;
+            rdCr=Greenfoot.getRandomNumber(60)+50;
             addObject(new BlueSQPVP(),(Greenfoot.getRandomNumber(2)*52)+26,0);
             addObject(new BlueTri(),(Greenfoot.getRandomNumber(2)*52)+237,0);
         }

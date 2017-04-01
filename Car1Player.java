@@ -16,6 +16,7 @@ public class Car1Player extends Car
         //dafault
     }
     
+    //Set picture , default locateion and control keyboard of each car 
     public Car1Player(String name){
         setImage(name);
         if(name.equals("Red.png")){
@@ -36,6 +37,7 @@ public class Car1Player extends Car
         super.checkSquare();
     }    
     
+    //move the car
     public void moving(){
         if(Greenfoot.isKeyDown(r) && getX()<=x && driving==false){
             driving=true;
@@ -53,6 +55,7 @@ public class Car1Player extends Car
         setRotation(0);
     }
     
+    //delay the car
     public void isDriving(){
         if(driving==true && c<=10) {
             c++;

@@ -16,8 +16,9 @@ public class CarPVP extends Car
         //dafault
     }
     
+    //Set keyboard to control each car
+    //Set default locate of each car
     public CarPVP(String name,int player){
-        super.player=player;
         setImage(name);
         if(player==1){
             if(name.equals("BluePVP.png")){
@@ -45,6 +46,7 @@ public class CarPVP extends Car
         super.checkAnotherGeo();
     }    
     
+    //move the car
     public void moving(){
         if(Greenfoot.isKeyDown(move)){
             driving=true;
@@ -65,6 +67,7 @@ public class CarPVP extends Car
         setRotation(0);
     }
     
+    //delay the car
     public void isDriving(){
         if(driving==true && c<=10) {
             c++;

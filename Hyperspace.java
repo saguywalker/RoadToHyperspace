@@ -33,7 +33,7 @@ public class Hyperspace extends Space
         b = Greenfoot.getRandomNumber(99)+101;
     }
     
-    
+    //select mode easy normal hell from lv parameter
     public void playing(int lv){
         create(lv);
         super.updateScore();
@@ -41,6 +41,7 @@ public class Hyperspace extends Space
         changeBG(lv);
     }
     
+    //draw line in the map
     public void draw(){
         getBackground().setColor(Color.BLUE);
         getBackground().drawLine(70,0,70,840);
@@ -55,6 +56,7 @@ public class Hyperspace extends Space
         getBackground().setColor(Color.BLACK);
     }
     
+    //change background color when score increased 
     public void changeBG(int lv){
        if(score == 0){
            rIncrease = true;
@@ -145,6 +147,7 @@ public class Hyperspace extends Space
        draw();
     }
     
+    //create geometric object in random
     public void create(int lv){
         createRedCir(lv);
         createBlueCir(lv);

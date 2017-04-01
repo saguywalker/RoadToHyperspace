@@ -7,17 +7,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 public class Car extends Actor
-{
-    int player;
-    public Car(){
-    
-    }
-    
-    public void act() 
-    {
-      
-    }
-    
+{   
+    //remove circle that touch this object
     public void checkCircle(){
         if(this.isTouching(Circle.class)){
             Greenfoot.playSound("sound82.wav");
@@ -25,6 +16,7 @@ public class Car extends Actor
         }
     }
     
+    //gameover when this object touching square
     public void checkSquare(){
         if(this.isTouching(Square.class)){
             Greenfoot.playSound("fade.wav");
@@ -33,15 +25,16 @@ public class Car extends Actor
         }
     }
     
+    //gameover when this object touching square or triangle
     public void checkAnotherGeo(){
         if(this.isTouching(Square.class)){
-            ((Space)getWorld()).message="PLAYER 1 WIN!";
+            ((Space)getWorld()).message=((PVPHyperspace)getWorld()).p1;
             Greenfoot.playSound("fade.wav");
             Greenfoot.setWorld(new Scoreboard());
             this.removeTouching(Square.class);
         }
         if(this.isTouching(Triangle.class)){
-            ((Space)getWorld()).message="PLAYER 2 WIN!";
+            ((Space)getWorld()).message=((PVPHyperspace)getWorld()).p2;
             Greenfoot.playSound("fade.wav");
             Greenfoot.setWorld(new Scoreboard());
             this.removeTouching(Triangle.class);

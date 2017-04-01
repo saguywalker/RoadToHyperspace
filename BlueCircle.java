@@ -8,10 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class BlueCircle extends Circle
 {
-    /**
-     * Act - do whatever the BlueCircle wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+
     int speed=3;
     public BlueCircle(int lv){
         setRotation(90);

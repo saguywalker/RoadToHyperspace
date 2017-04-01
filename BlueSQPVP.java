@@ -8,10 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class BlueSQPVP extends Square
 {
-    /**
-     * Act - do whatever the BlueSQPVP wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+
     int speed = 9;
     public BlueSQPVP(){
         setRotation(90);
