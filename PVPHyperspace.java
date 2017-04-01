@@ -41,8 +41,8 @@ public class PVPHyperspace extends Space
     
     public void act(){
         create();
-        super.updateScore();
-        showText("Score : "+score,getWidth()/2,getHeight()/12);
+        showText("Player 1",getWidth()/4,getHeight()/12);
+        showText("Player 2",3*getWidth()/4,getHeight()/12);
         changeBG();
     }
    
