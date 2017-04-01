@@ -17,6 +17,7 @@ public class CarPVP extends Car
     }
     
     public CarPVP(String name,int player){
+        super.player=player;
         setImage(name);
         if(player==1){
             if(name.equals("BluePVP.png")){
@@ -41,7 +42,7 @@ public class CarPVP extends Car
     {
         isDriving();
         super.checkCircle();
-        super.checkSquare();
+        super.checkAnotherGeo();
     }    
     
     public void moving(){

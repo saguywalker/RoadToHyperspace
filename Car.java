@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Car extends Actor
 {
+    int player;
     public Car(){
     
     }
@@ -29,6 +30,21 @@ public class Car extends Actor
             Greenfoot.playSound("fade.wav");
             Greenfoot.setWorld(new Scoreboard());
             this.removeTouching(Square.class);
+        }
+    }
+    
+    public void checkAnotherGeo(){
+        if(this.isTouching(Square.class)){
+            ((Space)getWorld()).message="PLAYER 1 WIN!";
+            Greenfoot.playSound("fade.wav");
+            Greenfoot.setWorld(new Scoreboard());
+            this.removeTouching(Square.class);
+        }
+        if(this.isTouching(Triangle.class)){
+            ((Space)getWorld()).message="PLAYER 2 WIN!";
+            Greenfoot.playSound("fade.wav");
+            Greenfoot.setWorld(new Scoreboard());
+            this.removeTouching(Triangle.class);
         }
     }
 }

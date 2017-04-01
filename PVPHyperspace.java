@@ -6,9 +6,9 @@ import java.awt.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class PVPHyperspace extends World
+public class PVPHyperspace extends Space
 {
-    public static long score=0;
+    
     int playNum = 0;
     boolean rIncrease, gIncrease, bIncrease;
     int cr=0,cb=0,hr=0,hb=0,time=0;
@@ -19,14 +19,15 @@ public class PVPHyperspace extends World
     int rdHb=Greenfoot.getRandomNumber(50)+300;
     GreenfootImage bg=new GreenfootImage(420,840);
     int rgb[]=new int[3];
-    SimpleTimer timer=new SimpleTimer();
     /**
      * Constructor for objects of class PVPHyperspace.
      * 
      */
+    
     public PVPHyperspace()
     {    
-        super(420, 840, 1);
+        
+        MainMenu.curPage = "PVPMode";
         bg.setColor(new Color(r,g,b));
         bg.fill();
         setBackground(bg);
@@ -40,7 +41,7 @@ public class PVPHyperspace extends World
     
     public void act(){
         create();
-        updateScore();
+        super.updateScore();
         showText("Score : "+score,getWidth()/2,getHeight()/12);
         changeBG();
     }
@@ -156,12 +157,5 @@ public class PVPHyperspace extends World
         }
     }
     
-    public void updateScore(){
-        score=timer.millisElapsed()/1000;
-    }
-    
-    public void gameOver(){
-        Greenfoot.setWorld(new Scoreboard());
-    }
 }
 

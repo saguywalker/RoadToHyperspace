@@ -7,9 +7,9 @@ import java.awt.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Hyperspace extends World
+public class Hyperspace extends Space
 {
-    public static long score=0;
+    public static String message="";
     boolean rIncrease, gIncrease, bIncrease;
     int cr=0,cb=0,hr=0,hb=0,time=0;
     int r,g,b;
@@ -19,10 +19,9 @@ public class Hyperspace extends World
     int rdHb=Greenfoot.getRandomNumber(50)+300;
     GreenfootImage bg=new GreenfootImage(420,840);
     int rgb[]=new int[3];
-    SimpleTimer timer=new SimpleTimer();
     public Hyperspace()
     {    
-        super(420, 840, 1); 
+        MainMenu.curPage="1Player";
         bg.setColor(new Color(r,g,b));
         bg.fill();
         setBackground(bg);
@@ -34,9 +33,10 @@ public class Hyperspace extends World
         b = Greenfoot.getRandomNumber(99)+101;
     }
     
+    
     public void playing(int lv){
         create(lv);
-        updateScore();
+        super.updateScore();
         showText("Score : "+score,getWidth()/2,getHeight()/12);
         changeBG(lv);
     }
@@ -238,11 +238,5 @@ public class Hyperspace extends World
         }
     }
     
-    public void updateScore(){
-        score=timer.millisElapsed()/1000;
-    }
     
-    public void gameOver(){
-        Greenfoot.setWorld(new Scoreboard());
-    }
 }

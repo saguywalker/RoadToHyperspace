@@ -9,4 +9,6 @@ comment3.params=
 comment3.target=void\ checkCircle()
 comment4.params=
 comment4.target=void\ checkSquare()
-numComments=5
+comment5.params=
+comment5.target=void\ checkAnotherGeo()
+numComments=6
