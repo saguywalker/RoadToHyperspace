@@ -19,11 +19,11 @@ public class Circle extends Geometric
             if(MainMenu.curPage.equals("PVPMode")){
                    if(this.getX()<=getWorld().getWidth()/2){
                        Greenfoot.playSound("fade.wav");
-                       ((Space)getWorld()).message=((PVPHyperspace)getWorld()).p2;
+                       ((Space)getWorld()).message=((PVPHyperspace)getWorld()).p2+" WIN!";
                        Greenfoot.setWorld(new Scoreboard());
                     }else{
                        Greenfoot.playSound("fade.wav");
-                       ((Space)getWorld()).message=((PVPHyperspace)getWorld()).p1;
+                       ((Space)getWorld()).message=((PVPHyperspace)getWorld()).p1+" WIN!";
                        Greenfoot.setWorld(new Scoreboard());
                     }
                 }

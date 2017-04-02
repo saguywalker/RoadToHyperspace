@@ -29,13 +29,13 @@ public class Car extends Actor
     //gameover when this object touching square or triangle
     public void checkAnotherGeo(){
         if(this.isTouching(Square.class)){
-            ((Space)getWorld()).message=((PVPHyperspace)getWorld()).p1;
+            ((Space)getWorld()).message=((PVPHyperspace)getWorld()).p1+" WIN!";
             Greenfoot.playSound("fade.wav");
             Greenfoot.setWorld(new Scoreboard());
             this.removeTouching(Square.class);
         }
         if(this.isTouching(Triangle.class)){
-            ((Space)getWorld()).message=((PVPHyperspace)getWorld()).p2;
+            ((Space)getWorld()).message=((PVPHyperspace)getWorld()).p2+" WIN!";
             Greenfoot.playSound("fade.wav");
             Greenfoot.setWorld(new Scoreboard());
             this.removeTouching(Triangle.class);

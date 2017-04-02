@@ -14,7 +14,7 @@ public class Scoreboard extends World
     {     
         super(420, 840, 1);
         MainMenu.curPage = "Score";
-        scorePic=new GreenfootImage(Space.message,60,Color.DARK_GRAY,Color.LIGHT_GRAY);
+        scorePic=new GreenfootImage(Space.message,48,Color.DARK_GRAY,Color.LIGHT_GRAY);
         getBackground().drawImage(board, 70, 300);
         addObject(new BackButt(),3*getWidth()/4,getHeight()*3/4+100);
         addObject(new AgainButt(),getWidth()/3,getHeight()*3/4+100);
@@ -24,5 +24,4 @@ public class Scoreboard extends World
     }
     
 }
-
 
