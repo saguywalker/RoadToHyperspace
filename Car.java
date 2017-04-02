@@ -20,6 +20,7 @@ public class Car extends Actor
     public void checkSquare(){
         if(this.isTouching(Square.class)){
             Greenfoot.playSound("fade.wav");
+            ((Space)getWorld()).message=((Hyperspace)getWorld()).name+"\n Score = "+((Hyperspace)getWorld()).score;
             Greenfoot.setWorld(new Scoreboard());
             this.removeTouching(Square.class);
         }

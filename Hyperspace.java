@@ -1,6 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-//import java.awt.*;
-
+import java.awt.*;
+import javax.swing.JOptionPane;
 /**
  * Write a description of class Hyperspace here.
  * 
@@ -10,6 +10,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Hyperspace extends Space
 {
     public static String message="";
+    String name;
     boolean rIncrease, gIncrease, bIncrease;
     int cr=0,cb=0,hr=0,hb=0,time=0;
     int r,g,b;
@@ -22,6 +23,7 @@ public class Hyperspace extends Space
     public Hyperspace()
     {    
         MainMenu.curPage="1Player";
+        name = JOptionPane.showInputDialog("Enter your name : ");
         bg.setColor(new Color(r,g,b));
         bg.fill();
         setBackground(bg);
