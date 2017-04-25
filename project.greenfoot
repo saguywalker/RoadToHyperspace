@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Sun Apr 02 15:10:46 ICT 2017
+#Tue Apr 25 12:02:59 ICT 2017
 class.RedSQPVP.image=SQRedPVP.png
 target24.type=ClassTarget
 target16.name=RedTri
@@ -49,7 +49,7 @@ dependency60.type=UsesDependency
 target14.showInterface=false
 dependency68.to=Help
 target32.width=80
-mainWindow.width=1932
+mainWindow.width=1938
 class.RedSQ.image=SQRed.png
 target8.showInterface=false
 target1.typeParameters=

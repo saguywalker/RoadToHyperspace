@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 public class Hyperspace extends Space
 {
     public static String message="";
-    String name;
+    //String name;
     boolean rIncrease, gIncrease, bIncrease;
     int cr=0,cb=0,hr=0,hb=0,time=0;
     int r,g,b;
@@ -24,6 +24,8 @@ public class Hyperspace extends Space
     {    
         MainMenu.curPage="1Player";
         name = JOptionPane.showInputDialog("Enter your name : ");
+        while(name.isEmpty()) name = JOptionPane.showInputDialog("Enter your name : ");
+        super.timer=new SimpleTimer();
         bg.setColor(new Color(r,g,b));
         bg.fill();
         setBackground(bg);

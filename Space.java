@@ -10,8 +10,8 @@ public class Space extends World
 {
     public static long score=0;
     public static String message="";
-    SimpleTimer timer=new SimpleTimer();
-    
+    SimpleTimer timer;
+    String name;
     public Space()
     {    
         super(420, 840, 1);  

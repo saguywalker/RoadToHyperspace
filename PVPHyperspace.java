@@ -21,12 +21,14 @@ public class PVPHyperspace extends Space
     int rdHb=Greenfoot.getRandomNumber(50)+300;
     GreenfootImage bg=new GreenfootImage(420,840);
     int rgb[]=new int[3];
-
     public PVPHyperspace()
     {            
         MainMenu.curPage = "PVPMode";
         p1=JOptionPane.showInputDialog("Enter 1st player's name : ");
+        while(p1.isEmpty()) p1=JOptionPane.showInputDialog("Enter 1st player's name : ");
         p2=JOptionPane.showInputDialog("Enter 2nd player's name : ");
+        while(p2.isEmpty()) p2=JOptionPane.showInputDialog("Enter 2nd player's name : ");
+        super.timer=new SimpleTimer();
         bg.setColor(new Color(r,g,b));
         bg.fill();
         setBackground(bg);
@@ -39,6 +41,7 @@ public class PVPHyperspace extends Space
     
     public void act(){
         create();
+        super.score=timer.millisElapsed()/1000;
         showText(p1,getWidth()/4,getHeight()/12);
         showText(p2,3*getWidth()/4,getHeight()/12);
         changeBG();

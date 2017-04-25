@@ -13,7 +13,7 @@ public class Circle extends Geometric
         if(this.getY()==getWorld().getHeight()-1) { //when it's at down edge of world
             if(MainMenu.curPage.equals("1Player")){
                 Greenfoot.playSound("fade.wav");
-                ((Space)getWorld()).message=((Hyperspace)getWorld()).name+"\n"+((Hyperspace)getWorld()).score;
+                ((Space)getWorld()).message=((Hyperspace)getWorld()).name+"\n Score = "+((Hyperspace)getWorld()).score;
                 Greenfoot.setWorld(new Scoreboard());
             }
             if(MainMenu.curPage.equals("PVPMode")){
